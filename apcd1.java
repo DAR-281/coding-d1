@@ -1,4 +1,4 @@
-public class day2{
+public class apcd1{
     public static void main(String[] args) {
 int x;
 int y;
