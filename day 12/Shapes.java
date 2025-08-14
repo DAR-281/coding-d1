@@ -1,36 +1,47 @@
-abstract class Objects {
-    abstract void showShape(); // Abstract method
+import java.util.Scanner;
 
-    void display() {
-        System.out.println("I'm from abstract class");
-    }
+public class Application {
+
+public static void main(String[] args) {
+
+Scanner sc = new Scanner(System.in);
+
+try {
+
+System.out.println("Enter two numbers:");
+
+int x = sc.nextInt();
+
+int y = sc.nextInt();
+
+int z = x / y;
+
+System.out.println(x + " / " + y + " = " + z);
+
 }
 
-class Sphere extends Objects {
-    void showShape() {
-        System.out.println("Object type is Sphere.");
-    }
+catch (Exception ex) {
+
+System.out.println("--- In catch block ---");
+
+System.out.println(ex.toString());
+
 }
 
-class Cuboid extends Objects {
-    void showShape() {
-        System.out.println("Object type is Cuboid.");
-    }
+finally {
+
+System.out.println("--- finally block ---");
+
+System.out.println("Application Designed & Developed by");
+
+System.out.println("Team @ Codingal");
+
+sc.close(); // Important to release the Scanner resource
+
 }
 
-public class Shapes {
+System.out.println("--- DONE ---");
 
-public static void main (String[] args) {
+}
 
-Objects obj;
-
-obj = new Sphere();
-obj.showShape();
-obj = new Cuboid();
-
-
-obj.showShape();
-obj.display();
-
-  }
 }
